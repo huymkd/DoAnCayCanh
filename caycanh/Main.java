@@ -114,7 +114,7 @@ public class Main {
                     System.out.println("1.Tang dan.");
                     System.out.println("2.Giam dan.");
                     System.out.println("====================");
-                    System.out.println("Chon chuc nang.");
+                    System.out.print("Chon chuc nang: ");
                     n = sc.nextInt();
                     switch (n) {
                         case 1:
