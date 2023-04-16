@@ -11,20 +11,20 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<CayCanh> dscc = new ArrayList<CayCanh>();
 
-        dscc.add(new CayMai(10501, "Gia Lai", "24-6-2018", 12, 21000000, "Cay Mai", "Tu Quy"));
-        dscc.add(new CayMai(10500, "Tan Phu", "23-2-2018", 9, 30000000, "Cay Mai", "Vang"));
-        dscc.add(new CayDao(10502, "Da Lat", "29-5-2019", 5, 15000000, "Cay Dao", "Thang Long"));
-        dscc.add(new CayLan(10505, "Go Vap", "8-8-2018", 10, 500000, "Cay Lan", "Hop phong thuy"));
-        dscc.add(new CayDao(10503, "Cao Bang", "13-9-2018", 7, 4000000, "Cay Dao", "Phi Thang"));
-        dscc.add(new CayLan(10504, "Q12", "3-2-2020", 2, 900000, "Cay Lan", "Loc khi"));
-
+        dscc.add(new CayBonsai(10501,"vong cung", "ha noi ", 19, 356666,"21-8-2019", "cay da"));
+        dscc.add(new CayBonsai(10506, "uốn lượn ", "gia lai ", 10, 233333, "24-8-1990", "cay si"));
+        dscc.add(new CayNgayTet("trang tri", 10507,"dong nai ","3-4-2023", 10, 450000, "cay mai vang "));
+        dscc.add(new CayNgayTet("mang den su may man", 10509,"ha giang","30-11-2022", 25, 550000,"dao nhat tan"));
+        dscc.add(new CayPhongThuy("may man","mau xanh", 10503,"lam dong ","13-9-2020", 12, 250000,"cay ngoc ngan"));
+        dscc.add(new CayPhongThuy("tai loc ","mau do ", 10504,"thai binh ","21--8-2021", 35, 350000,"van loc"));
+        
         int n;
         do {
             System.out.println("=============== Menu chinh quan ly kho cay canh =======");
             System.out.println("1.Xem thong tin nhung loai cay da co trong kho.");
-            System.out.println("2.Nhap cay Mai vao kho.");
-            System.out.println("3.Nhap cay Dao vao kho.");
-            System.out.println("4.Nhap cay Lan vao kho.");
+            System.out.println("2.Nhap cay Bonsai vao kho.");
+            System.out.println("3.Nhap cay phong thuy vao kho.");
+            System.out.println("4.Nhap cay ngay tet vao kho.");
             System.out.println("5.Hien thong cay vua them vao kho.");
             System.out.println("6.Xoa cay trong kho.");
             System.out.println("7.Chinh sua cay canh trong kho.");
@@ -41,22 +41,22 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("1.Nhap cay mai");
-                    CayMai cm = new CayMai();
-                    cm.nhap();
-                    dscc.add(cm);
+                    System.out.println("1.Nhap vao cay bonsai");
+                    CayBonsai bs = new CayBonsai();
+                    bs.nhap();
+                    dscc.add(bs);
                     break;
                 case 3:
-                    System.out.println("2.Nhap cay dao");
-                    CayDao cd = new CayDao();
-                    cd.nhap();
-                    dscc.add(cd);
+                    System.out.println("2.Nhap vao cay phong thuy");
+                    CayPhongThuy cpt = new CayPhongThuy();
+                    cpt.nhap();
+                    dscc.add(cpt);
                     break;
                 case 4:
-                    System.out.println("3.Nhap cay lan");
-                    CayLan cl = new CayLan();
-                    cl.nhap();
-                    dscc.add(cl);
+                    System.out.println("3.Nhap vao cay ngay tet");
+                    CayNgayTet cnt = new CayNgayTet();
+                    cnt.nhap();
+                    dscc.add(cnt);
                     break;
                 case 5:
                     for (CayCanh caycanh : dscc) {
@@ -76,9 +76,12 @@ public class Main {
                             break;
                         }
                     }
+                    System.out.println("Danh sach cay da xoa");
                     for (CayCanh caycanh : dscc) {
+                        
                         System.out.println(caycanh.toString());
                     }
+                
                     break;
                 case 7:
                     System.out.println("Danh sach cay trong kho.");
@@ -104,8 +107,11 @@ public class Main {
                             caycanh.setGiaban(sc.nextInt());
                             break;
                         }
+                                
                     }
+                    System.out.println("Danh sach cay da sua");
                     for (CayCanh caycanh : dscc) {
+                       
                         System.out.println(caycanh.toString());
                     }
                     break;

@@ -2,33 +2,40 @@ package caycanh;
 
 import java.util.Scanner;
 
-public class CayLan extends CayCanh {
+public class CayNgayTet extends CayCanh {
+    private String ynghia;
+    
 
-    private String loiich;
-
-    public CayLan() {
+    public CayNgayTet() {
 
     }
 
-    public CayLan(int macay, String nguongoc, String ngaynhap, int soluong, int giaban, String ten, String loiich) {
+    public CayNgayTet(String ynghia) {
+        this.ynghia = ynghia;
+    }
+
+    public CayNgayTet(String ynghia, int macay, String nguongoc, String ngaynhap, int soluong, int giaban, String ten) {
         super(macay, nguongoc, ngaynhap, soluong, giaban, ten);
-        this.loiich = loiich;
+        this.ynghia = ynghia;
     }
 
-    public String getLoiich() {
-        return loiich;
+
+    public String getYnghia() {
+        return ynghia;
     }
 
-    public void setLoiich(String loiich) {
-        this.loiich = loiich;
+    public void setYnghia(String ynghia) {
+        this.ynghia = ynghia;
     }
+
+    
 
     @Override
     public void nhap() {
         super.nhap();
-        System.out.print("Nhap loi ich cay Lan: ");
+        System.out.print("Nhap y nghia : ");
         Scanner sc = new Scanner(System.in);
-        loiich = sc.nextLine();
+        ynghia = sc.nextLine();
     }
 
     @Override
@@ -39,7 +46,7 @@ public class CayLan extends CayCanh {
                 + ", Ngay nhap:" + this.getNgaynhap()
                 + ", So luong:" + this.getSoluong()
                 + ", Gia ban:" + this.getGiaban()
-                + ", Loi ich:" + this.loiich;
+                + ", y nghia:" + this.ynghia;
     }
 
 }
