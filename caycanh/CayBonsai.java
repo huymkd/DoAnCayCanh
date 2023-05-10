@@ -7,6 +7,7 @@ public class CayBonsai extends CayCanh {
     public CayBonsai(){
         
     }
+
     public String getKieudang() {
         return kieudang;
     }
@@ -19,8 +20,8 @@ public class CayBonsai extends CayCanh {
         this.kieudang = kieudang;
     }
 
-    public CayBonsai(int macay, String kieudang, String nguongoc, int soluong, int giaban, String ngaynhap, String ten) {
-        super(macay, nguongoc, ngaynhap, soluong, giaban, ten);
+    public CayBonsai(int macay, String kieudang, String nguongoc, int soluong, int giaban, int ngay,int thang,int nam, String ten) {
+        super(macay, nguongoc, thang, nam, ngay, soluong, giaban, ten, ngay);
         this.kieudang = kieudang;
     }
    
@@ -31,14 +32,19 @@ public class CayBonsai extends CayCanh {
         Scanner sc=new Scanner(System.in);
         kieudang =sc.nextLine();
     }
-    @Override
+    /*@Override
+    public String toString() {
+        return super.toString()+
+                ", kieu dang:"+this.kieudang;
+    }   */
+ @Override
     public String toString() {
         return "Ma Cay:"+this.getMacay()+
                 ", Ten:"+this.getTen()+
                 ", Nguon goc:"+this.getNguongoc()+
-                ", Ngay nhap:"+this.getNgaynhap()+
+                ", Ngay :"+this.getNgay()+ ",Thang: "+this.getThang()+",Nam: "+this.getNam()+
                 ", So luong:"+this.getSoluong()+
                 ", Gia ban:"+this.getGiaban()+
                 ", kieu dang:"+this.kieudang;
-    }   
+    } 
 }

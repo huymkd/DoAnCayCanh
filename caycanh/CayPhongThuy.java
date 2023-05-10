@@ -15,8 +15,8 @@ public class CayPhongThuy extends CayCanh {
         this.mausac = mausac;
     }
 
-    public CayPhongThuy(String congdung, String mausac, int macay, String nguongoc, String ngaynhap, int soluong, int giaban, String ten) {
-        super(macay, nguongoc, ngaynhap, soluong, giaban, ten);
+    public CayPhongThuy(String congdung, String mausac, int macay, String nguongoc, int ngay,int thang, int nam, int soluong, int giaban, String ten) {
+        super(macay, nguongoc, thang, nam, nam, soluong, giaban, ten, ngay);
         this.congdung = congdung;
         this.mausac = mausac;
     }
@@ -48,13 +48,13 @@ public class CayPhongThuy extends CayCanh {
 
     @Override
     public String toString() {
-        return "Ma cay:" + this.getMacay()
-                + " ,Ten:" + this.getTen()
-                + " ,Nguon goc:" + this.getNguongoc()
-                + " ,Ngay nhap:" + this.getNgaynhap()
-                + " ,So luong:" + this.getSoluong()
-                + " ,Gia ban:" + this.getGiaban()
-                + " ,Cong Dung:" + this.congdung;
+        return "Ma Cay:"+this.getMacay()+
+                ", Ten:"+this.getTen()+
+                ", Nguon goc:"+this.getNguongoc()+
+                ", Ngay :"+this.getNgay()+ ",Thang: "+this.getThang()+",Nam: "+this.getNam()+
+                ", So luong:"+this.getSoluong()+
+                ", Gia ban:"+this.getGiaban()+
+                " ,Cong Dung:" + this.congdung;
     }
 
 }

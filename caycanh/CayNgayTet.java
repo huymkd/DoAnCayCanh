@@ -14,8 +14,8 @@ public class CayNgayTet extends CayCanh {
         this.ynghia = ynghia;
     }
 
-    public CayNgayTet(String ynghia, int macay, String nguongoc, String ngaynhap, int soluong, int giaban, String ten) {
-        super(macay, nguongoc, ngaynhap, soluong, giaban, ten);
+    public CayNgayTet(String ynghia, int macay, String nguongoc, int ngay,int thang,int nam, int soluong, int giaban, String ten) {
+        super(macay, nguongoc, thang, nam, ngay, soluong, giaban, ten, ngay);
         this.ynghia = ynghia;
     }
 
@@ -40,13 +40,13 @@ public class CayNgayTet extends CayCanh {
 
     @Override
     public String toString() {
-        return "Ma cay:" + this.getMacay()
-                + ", Ten:" + this.getTen()
-                + ", Nguon goc:" + this.getNguongoc()
-                + ", Ngay nhap:" + this.getNgaynhap()
-                + ", So luong:" + this.getSoluong()
-                + ", Gia ban:" + this.getGiaban()
-                + ", y nghia:" + this.ynghia;
+        return "Ma Cay:"+this.getMacay()+
+                ", Ten:"+this.getTen()+
+                ", Nguon goc:"+this.getNguongoc()+
+                ", Ngay :"+this.getNgay()+ ",Thang: "+this.getThang()+",Nam: "+this.getNam()+
+                ", So luong:"+this.getSoluong()+
+                ", Gia ban:"+this.getGiaban()+
+                ", y nghia:" + this.ynghia;
     }
 
 }
